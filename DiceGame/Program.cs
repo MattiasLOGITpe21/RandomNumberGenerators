@@ -11,6 +11,8 @@ namespace DiceGame
             //programm kontrollib, kes rohkem viskas
             //programm kuulutab võitja
 
+            // saab teha ka string player1 ja string player2
+
             Random rnd = new Random();
             int dice = rnd.Next(1, 7);
             int dice2 = rnd.Next(1, 7);
@@ -27,9 +29,13 @@ namespace DiceGame
             {
                 Console.WriteLine("Võitja on [Player1]");
             }
-            else
+            else if (dice < dice2)
             {
                 Console.WriteLine("Võitja on [Player2]");
+            }
+            else
+            {
+                Console.WriteLine("Viik!");
             }
             Console.ReadLine();
 
